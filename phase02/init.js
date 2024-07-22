@@ -21,8 +21,8 @@ async function renderBooks () {
         const author = document.createElement('p');
         const image = document.createElement('img');
 
-        title.innerText = element.name;
-        author.innerText = element.author;
+        title.textContent = element.name;
+        author.textContent = element.author;
         image.src = element.image;
         
         book.appendChild(title);
