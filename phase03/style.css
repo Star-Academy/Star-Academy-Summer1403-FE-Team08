@@ -1,3 +1,7 @@
+*{
+    font-family: "Roboto", sans-serif;
+} 
+
 .book {
     border: 1px solid black;
     display: inline-block;
@@ -41,4 +45,10 @@ article>div>p{
 
 body>div{
     padding: 1rem 5rem;
+}
+
+@media only screen and (max-width: 530px) {
+    body>div{
+        padding: 1rem 1rem;
+    }
 }
