@@ -1,0 +1,124 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+span {
+  display: block;
+}
+
+body {
+  background-color: #fafafa;
+}
+body .container {
+  padding: 1rem 5rem;
+}
+@media only screen and (max-width: 600px) {
+  body .container {
+    padding: 1rem 3rem;
+  }
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3rem;
+}
+article .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+@media only screen and (max-width: 600px) {
+  article .book {
+    flex-wrap: wrap;
+  }
+}
+article .book .image-container {
+  width: 100%;
+  z-index: 2;
+}
+@media only screen and (max-width: 600px) {
+  article .book .image-container {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  article .book .image-container {
+    z-index: 0;
+  }
+}
+article .book .image-container img {
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  article .book .image-container img {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}
+article .book .info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+article .book .info-container .info {
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1.5rem;
+  background-color: white;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  article .book .info-container .info {
+    border-radius: 0.5rem;
+  }
+}
+article .book .info-container .info .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+}
+article .book .info-container .info hr {
+  border: dashed 1px #ccc;
+  margin: 1rem 0;
+}
+article .book .info-container .info .small-desc {
+  display: block;
+}
+article .book .info-container .info .small-desc > p {
+  display: block;
+  margin: 0;
+  margin-top: 0.5rem;
+  color: #222;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  article .book .info-container .info .small-desc > p {
+    display: inline-block;
+  }
+}
+article .book .info-container .info .small-desc > span {
+  display: block;
+  color: #333;
+}
+@media only screen and (max-width: 600px) {
+  article .book .info-container .info .small-desc > span {
+    display: inline-block;
+  }
+}
+
+.small-desc {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
