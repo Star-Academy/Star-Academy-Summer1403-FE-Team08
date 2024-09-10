@@ -1,7 +1,0 @@
-<div class="container">
-  @if (booksList.length ===0) {
-  <app-error-container [errorMessage]="'Sorry no book was found :('" />
-  } @for (book of booksList; track book.name) {
-  <vertical-book [bookSpec]="book" class="container__book" /> }
-  <app-all-genres-container />
-</div>

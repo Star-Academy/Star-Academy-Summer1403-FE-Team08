@@ -1,8 +1,0 @@
-<h3 class="title">Genres</h3>
-<div class="genre-container" data-testid="genre-container">
-  @for (genre of allGenre ; track genre) {
-  <a [routerLink]="['/genre', genre]">
-    <mat-chip class="chips">{{ genre }}</mat-chip>
-  </a>
-  }
-</div>

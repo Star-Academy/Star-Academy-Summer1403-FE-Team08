@@ -1,0 +1,114 @@
+@mixin rounded {
+  border-radius: 0.5rem;
+}
+@mixin bold {
+  font-weight: bold;
+}
+@mixin small-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+@mixin center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+span {
+  display: block;
+}
+
+body {
+  background-color: #fafafa;
+  .container {
+    padding: 1rem 5rem;
+    @media only screen and (max-width: 600px) {
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+article {
+  @include center-items;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3rem;
+  .book {
+    @include center-items;
+    width: 30rem;
+    @media only screen and (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+    .image-container {
+      width: 100%;
+      z-index: 2;
+      @media only screen and (max-width: 600px) {
+        width: 60%;
+      }
+      @media only screen and (max-width: 600px) {
+        z-index: 0;
+      }
+      img {
+        @include rounded();
+        @include small-shadow;
+        width: 100%;
+        @media only screen and (max-width: 600px) {
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+      }
+    }
+    .info-container {
+      @include center-items;
+      width: 100%;
+      z-index: 1;
+      .info {
+        @include small-shadow;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 1.5rem;
+        background-color: white;
+        width: 100%;
+        @media only screen and (max-width: 600px) {
+          @include rounded();
+        }
+        .title {
+          @include bold;
+          font-size: 1.5rem;
+          margin: 0;
+          text-align: center;
+        }
+        hr {
+          border: dashed 1px #ccc;
+          margin: 1rem 0;
+        }
+        .small-desc {
+          display: block;
+        }
+        .small-desc > p {
+          @include bold;
+          display: block;
+          margin: 0;
+          margin-top: 0.5rem;
+          color: #222;
+          @media only screen and (max-width: 600px) {
+            display: inline-block;
+          }
+        }
+        .small-desc > span {
+          display: block;
+          color: #333;
+          @media only screen and (max-width: 600px) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.small-desc {
+  display: inline-block;
+}
